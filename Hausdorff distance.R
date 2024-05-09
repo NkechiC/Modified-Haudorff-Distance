@@ -79,3 +79,8 @@ sqd_complex_complex<-function(X,Y){
   }
   return(max2)
 }
+
+#Final step
+scd(X,Y)<- function(X,Y){
+  max(sqd_complex_complex(X,Y), sqd_complex_complex(Y,X))
+    }
