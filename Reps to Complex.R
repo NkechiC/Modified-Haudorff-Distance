@@ -105,6 +105,7 @@ return(CancelPairs(E))}
 #source("CancelPairs.R")
 #source("AddCycles.R")
 
+reps_to_complex<-function(D){
 #Initial input is a H_1 cycle representative, a p*2*d array D
 coordinates<-nonredundant(D)#a nonredundant list of vertices in D, matrix
 N<-nrow(coordinates)
@@ -134,4 +135,7 @@ if(N=0){return(cmplx)#return the empty list. (This is the 0-cycle)
 }else{
 #others<-list(sort(c(A,B)))#other 1- and higher dimensional simplices
 cmplx<-append(vert,sort(c(A,B)))#combine both lists together
+}
+
+return(list(cmplx, coordinates))
 }
